@@ -1,0 +1,44 @@
+.banner {
+  position: relative;
+  overflow: hidden;
+
+  img {
+    height: 15.63vw;
+    width: 100%;
+    object-fit: cover;
+
+    @include tablet {
+      height: max(24.41vw, 200px);
+    }
+
+    @include mobile {
+      height: min(46.88vw, 200px);
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(35deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 70%);
+    animation: shine 10s infinite;
+    z-index: 1;
+  }
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+
+  10% {
+    left: 100%;
+  }
+
+  100% {
+    left: 100%;
+  }
+}

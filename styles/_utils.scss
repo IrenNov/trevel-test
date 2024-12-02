@@ -1,0 +1,36 @@
+.container {
+  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  padding-block: var(--container-padding-y);
+  padding-inline: var(--container-padding-x);
+  margin-inline: auto;
+}
+.btn {
+  padding-block: 12px;
+  background: var(--color-primary);
+  color: inherit;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  max-width: 180px;
+  text-align: center;
+  @include hover {
+    background: var(--color-primary-3);
+    box-shadow: var(--btn-hover-shadow);
+  }
+  
+  @include tablet {
+    max-width: 100%;
+  }
+}
+.link {
+  @include hover {
+    text-decoration: underline;
+  }
+}
+.link.visited {
+  opacity: 0.5;
+}
+
+.visually-hidden {
+  @include visually-hidden;
+}
+

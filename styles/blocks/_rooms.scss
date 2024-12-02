@@ -1,0 +1,26 @@
+.rooms {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+  gap: clamp(24px, 3.39vw, 33px);
+  
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+    padding: 0;
+  }
+
+  &__item {
+    flex: 1 1 33.333%;
+    max-width: 372px; 
+    min-width: 288px; 
+    box-sizing: border-box; 
+  }
+
+}

@@ -1,0 +1,59 @@
+body {
+  font-family: var(--font-family-first);
+  @include fluid-text;
+  font-weight: 700;
+  line-height: 1.28;
+  color: rgb(var(--color-white));
+  background: url(../images/background.png) fixed center/cover no-repeat;
+}
+
+a,
+button,
+input,
+textarea,
+svg * {
+  outline: none;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+hr {
+  margin: 0;
+}
+
+h1,
+.h1 {
+  font-family: var(--font-family-second);
+  font-weight: 500;
+  @include fluid-text(36, 24);
+  line-height: 153%;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--color-black);
+  @include mobile-s {
+    font-weight: 700;
+  }
+}
+
+h2,
+.h2 {
+  font-family: var(--font-family-second);
+  @include fluid-text(24, 20);
+  line-height: 1.33;
+}
+
+h3,
+.h3 {
+  font-size: 24px;
+}
+
+h4,
+.h4 {
+  font-size: 18px;
+}

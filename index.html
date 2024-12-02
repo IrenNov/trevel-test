@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <main class="rooms container">
+      <h1 class="rooms__title">Номера и цены</h1>
+      <ul class="rooms__list">
+        <li class="rooms__item">
+          <article class="room-card" data-type="default" data-status="active">
+            <img
+              src="images/room-img-1.png"
+              alt="Представительский люкс с панорамным видом"
+              class="room-card__image"
+            />
+            <div class="room-card__motivator">
+              <p>Гарантия лучшей цены</p></div>
+            <div class="room-card__content">
+              <h2 class="room-card__title h2">
+                <a href="#" class="room-card__link link"
+                  >Представительский люкс</a
+                >
+              </h2>
+              <p class="room-card__description">
+                Эксклюзивный номер с панорамным видом на центр города Москвы
+              </p>
+            </div>
+            <div class="room-card__footer">
+              <div class="room-card__default">
+                <p class="room-card__price">
+                <span class="price-label">Цена за сутки</span>
+                <span class="price-prefix">от</span>
+                <span class="price-value h2">7500</span>
+                <span class="currency h2">₽</span>
+              </p>
+              <button
+                class="room-card__button btn"
+                type="button"
+                data-state="default"
+              >
+                Забронировать
+              </button>
+              </div>
+              
+              <p class="room-card__reserved">
+                <span>Номер зарезервирован</span>
+                <span>Перейти к <a class="room-card__payment-link link" href="#">
+                  оплате
+                </a></span>
+                
+              </p>
+            </div>
+          </article>
+        </li>
+        <li class="rooms__item">
+          <article class="room-card" data-type="hasmotivator" data-status="active">
+            <img
+              src="images/room-img-2.png"
+              alt="Дуплекс"
+              class="room-card__image"
+            />
+            <div class="room-card__motivator">
+              <p>Гарантия лучшей цены</p></div>
+            <div class="room-card__content">
+              <h2 class="room-card__title h2">
+                <a href="#" class="room-card__link link"
+                  >Дуплекс</a
+                >
+              </h2>
+              <p class="room-card__description">
+                Просторный двухкомнатный номер с шикарным видом на парк
+              </p>
+            </div>
+            <div class="room-card__footer">
+              <div class="room-card__default">
+                <p class="room-card__price">
+                <span class="price-label">Цена за сутки</span>
+                <span class="price-prefix">от</span>
+                <span class="price-value h2">5700</span>
+                <span class="currency h2">₽</span>
+              </p>
+              <button
+                class="room-card__button btn"
+                type="button"
+                data-state="default"
+              >
+                Забронировать
+              </button>
+              </div>
+              
+              <p class="room-card__reserved">
+                <span>Номер зарезервирован</span>
+                <span>Перейти к <a class="room-card__payment-link link" href="#">
+                  оплате
+                </a></span>
+                
+              </p>
+            </div>
+          </article>
+        </li>
+        <li class="rooms__item">
+          <article class="room-card" data-type="default" data-status="active">
+            <img
+              src="images/room-img-3.png"
+              alt="Бизнес-люкс"
+              class="room-card__image"
+            />
+            <div class="room-card__motivator">
+              <p>Гарантия лучшей цены</p></div>
+            <div class="room-card__content">
+              <h2 class="room-card__title h2">
+                <a href="#" class="room-card__link link"
+                  >Бизнес-люкс</a
+                >
+              </h2>
+              <p class="room-card__description">
+                Эксклюзивный номер с панорамным видом на центр города Москвы
+              </p>
+            </div>
+            <div class="room-card__footer">
+              <div class="room-card__default">
+                <p class="room-card__price">
+                <span class="price-label">Цена за сутки</span>
+                <span class="price-prefix">от</span>
+                <span class="price-value h2">4900</span>
+                <span class="currency h2">₽</span>
+              </p>
+              <button
+                class="room-card__button btn"
+                type="button"
+                data-state="default"
+              >
+                Забронировать
+              </button>
+              </div>
+              
+              <p class="room-card__reserved">
+                <span>Номер зарезервирован</span>
+                <span>Перейти к <a class="room-card__payment-link link" href="#">
+                  оплате
+                </a></span>
+                
+              </p>
+            </div>
+          </article>
+        </li>
+      </ul>
+    </main>
+    <script src="/scripts/link-visited.js"></script>
+  </body>
+</html>
