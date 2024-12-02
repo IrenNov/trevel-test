@@ -479,8 +479,6 @@ h4,
   padding: 0;
 }
 .rooms__item {
-  flex: 1 1 33.333%;
-  max-width: 372px;
-  min-width: 288px;
+  width: clamp(288px, 43.49vw, 372px);
   box-sizing: border-box;
 }/*# sourceMappingURL=style.css.map */
