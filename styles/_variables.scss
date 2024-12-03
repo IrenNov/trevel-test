@@ -28,9 +28,9 @@
 
   --container-width: 1180px;
   --container-padding-x: clamp(16px, 4.43vw, 34px);
-  --container-padding-y: clamp(24px, 3.52vw, 27px) 39px;
+  --container-padding-y: clamp(24px, 3.52vw, 27px) 35px;
   @include mobile-s {
-    --container-padding-y: 24px 49px;
+    --container-padding-y: 20px 49px;
   }
 
 }

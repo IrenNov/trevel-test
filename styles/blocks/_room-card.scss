@@ -1,8 +1,9 @@
 .room-card {
+  width: clamp(288px, 43.49vw, 372px);
+  margin: auto;
   padding-inline: clamp(21px, 3.13vw, 24px);
-  padding-block: 22px;
-  min-height: 372px;
-  max-height: 420px;
+  padding-block: 23px;
+  height: 372px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -12,6 +13,11 @@
   color: var(--color-white);
   background: var(--gradient-1);
   transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  @include mobile {
+    height: clamp(347px, 54.68vw, 420px);
+    padding-block: clamp(22px, 3.52vw, 27px);
+  }
+   
 
   &__image {
     position: absolute;
@@ -56,6 +62,9 @@
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    @include mobile {
+      -webkit-line-clamp: 2;
+    }
     
   }
   &__description {
@@ -66,6 +75,9 @@
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    @include mobile {
+      -webkit-line-clamp: 3;
+    }
   }
 
   &__default {
@@ -80,6 +92,9 @@
       flex-direction: column;
       align-items: stretch;
       gap: 16px;
+    }
+    @include mobile-s {
+      gap: 18px;
     }
   }
 
@@ -103,7 +118,6 @@
   }
   .price-value {
     color: var(--color-primary-2);
-    letter-spacing: 2px;
   }
   .currency {
     color: #999999;

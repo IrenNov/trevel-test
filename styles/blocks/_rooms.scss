@@ -5,14 +5,14 @@
   justify-content: center;
   min-height: 100vh;
   box-sizing: border-box;
-  gap: clamp(24px, 3.39vw, 33px);
-  
+ 
 
   &__list {
+    margin-top: clamp(24px, 4.49vw, 30px);
     display: flex;
     flex-wrap: wrap;
     column-gap: clamp(28px, 2.5vw, 32px);
-    row-gap: clamp(32px, 2.89vw, 37px);
+    row-gap: clamp(32px, 5.2vw, 37px);
     padding: 0;
     align-items: stretch;
     justify-content: center;
@@ -20,8 +20,8 @@
   }
 
   &__item {
-    width: clamp(288px, 43.49vw, 372px);
-    box-sizing: border-box;
+    width: 33.3%;
+    flex: 1;
   @include mobile{
     width: 336px;    
   }

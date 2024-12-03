@@ -43,6 +43,9 @@ h1,
   text-transform: uppercase;
   text-align: center;
   color: var(--color-black);
+  @include mobile {
+    padding-top: 5px;
+  }
   @include mobile-s {
     font-weight: 700;
   }
