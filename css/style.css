@@ -229,7 +229,7 @@ body {
   background-image: var(--fon-gradient), url(../images/background-grey.svg);
   background-attachment: fixed;
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
 }
 @media (max-width: 768px) {
