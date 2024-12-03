@@ -504,6 +504,29 @@ h4,
 .room-card[data-type=hasmotivator][data-status=active]:hover .room-card__motivator {
   opacity: 1;
 }
+@media (hover: none) {
+  .room-card[data-status=selected] {
+    background-color: rgba(var(--color-white), 0.4);
+  }
+  .room-card[data-status=selected] .room-card__default {
+    display: none;
+  }
+  .room-card[data-status=selected] .room-card__footer {
+    border: none;
+  }
+  .room-card[data-status=selected] .room-card__button {
+    background-color: var(--color-primary-3);
+    color: var(--color-btn-pressed);
+  }
+  .room-card[data-status=selected] .room-card__motivator {
+    opacity: 0;
+  }
+  .room-card[data-status=selected] .room-card__reserved {
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+  }
+}
 
 .rooms {
   display: flex;

@@ -17,7 +17,6 @@
     height: clamp(347px, 54.68vw, 420px);
     padding-block: clamp(22px, 3.52vw, 27px);
   }
-   
 
   &__image {
     position: absolute;
@@ -66,7 +65,6 @@
     @include mobile {
       -webkit-line-clamp: 2;
     }
-    
   }
   &__description {
     line-height: 1.5;
@@ -205,6 +203,31 @@
     &[data-status="active"] {
       &:hover .room-card__motivator {
         opacity: 1;
+      }
+    }
+  }
+  @media (hover: none) {
+    &[data-status="selected"] {
+      background-color: rgba(var(--color-white), 0.4);
+
+      .room-card__default {
+        display: none;
+      }
+      .room-card__footer {
+        border: none;
+      }
+      .room-card__button {
+        background-color: var(--color-primary-3);
+        color: var(--color-btn-pressed);
+      }
+
+      .room-card__motivator {
+        opacity: 0;
+      }
+      .room-card__reserved {
+        display: flex;
+        flex-direction: column;
+        z-index: 1;
       }
     }
   }
