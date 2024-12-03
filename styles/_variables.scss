@@ -13,6 +13,7 @@
 
   --gradient-1:  linear-gradient(180deg, rgba(10, 34, 64, 0.1) 0%, #0A2240 100%);
   --gradient-2:  linear-gradient(21deg, rgba(170, 203, 240, 0.25) 0%, rgba(170, 203, 240, 0.75) 100%);
+  --fon-gradient:  linear-gradient(180deg, rgba(222, 237, 255, 0.6) 0%, rgba(166, 204, 250, 0.5) 100%);
 
   --border-radius: 5px;
   --button-height: 48px;
@@ -26,10 +27,9 @@
   --card-hover-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.6);
 
   --container-width: 1180px;
-  --container-padding-x: min(4.43vw, 34px);
+  --container-padding-x: clamp(16px, 4.43vw, 34px);
   --container-padding-y: clamp(24px, 3.52vw, 27px) 39px;
   @include mobile-s {
-    --container-padding-x: 14px;
     --container-padding-y: 24px 49px;
   }
 

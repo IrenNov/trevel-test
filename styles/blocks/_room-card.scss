@@ -1,6 +1,8 @@
 .room-card {
-  padding: clamp(21px, 3.13vw, 24px);
+  padding-inline: clamp(21px, 3.13vw, 24px);
+  padding-block: 22px;
   min-height: 372px;
+  max-height: 420px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -34,7 +36,7 @@
     border-radius: 3px 0 0 3px;
     background-color: var(--color-accent);
     transition: opacity 0.35s ease-in-out;
-    &::after{
+    &::after {
       content: "";
       top: 0;
       left: 99%;
@@ -47,14 +49,23 @@
   }
 
   &__title {
-    margin: 0 0 8px;
+    margin: 0 0 9px;
   }
-  
-
+  &__link {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    
+  }
   &__description {
     line-height: 1.5;
-    margin: 0 0 20px;
+    margin: 0 0 22px;
     font-weight: 400;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   &__default {
@@ -78,7 +89,6 @@
     display: grid;
     grid-template-rows: repeat(2, auto);
     grid-template-columns: repeat(3, auto);
-    column-gap: 4px;
     align-items: center;
     flex-shrink: 0;
     width: fit-content;
@@ -93,6 +103,7 @@
   }
   .price-value {
     color: var(--color-primary-2);
+    letter-spacing: 2px;
   }
   .currency {
     color: #999999;
@@ -103,6 +114,7 @@
     flex-grow: 1;
     transition: background-color 0.2s, color 0.2s;
   }
+
   &__reserved {
     position: relative;
     height: 70px;
@@ -112,7 +124,6 @@
     font-weight: 400;
     line-height: 1.5;
     padding-top: 25px;
-    z-index: 1;
     &::before {
       content: "";
       position: absolute;
@@ -126,24 +137,31 @@
   }
   &__payment-link {
     font-weight: 600;
-    color: var(--color-primary-2);   
-  } 
+    color: var(--color-primary-2);
+  }
   &__payment-link.link.visited {
-      color: var(--color-link-pressed);
-      opacity: 1;
-    }
-  @include hover {
+    color: var(--color-link-pressed);
+    opacity: 1;
+  }
+  &:hover {
     box-shadow: var(--card-hover-shadow);
   }
-  &:has(.link.visited){
+  &:has(.room-card__link.visited) {
     box-shadow: var(--card-hover-shadow);
+    &[data-type="hasmotivator"] {
+      &[data-status="active"] {
+        @media (hover: none) {
+          .room-card__motivator {
+            opacity: 1;
+          }
+        }
+      }
+    }
   }
 
   &[data-status="reserved"] {
     background-color: rgba(var(--color-white), 0.4);
-    @include hover {
-      box-shadow: none;
-    }
+
     .room-card__default {
       display: none;
     }
@@ -155,18 +173,23 @@
       color: var(--color-btn-pressed);
     }
 
+    .room-card__motivator {
+      opacity: 0;
+    }
     .room-card__reserved {
       display: flex;
       flex-direction: column;
+      z-index: 1;
     }
+  }
+  &[data-status="reserved"]:hover {
+    box-shadow: none;
   }
   &[data-type="hasmotivator"] {
     &[data-status="active"] {
       &:hover .room-card__motivator {
-        opacity: 1; 
+        opacity: 1;
       }
     }
-  
   }
-  
 }

@@ -4,7 +4,14 @@ body {
   font-weight: 700;
   line-height: 1.28;
   color: rgb(var(--color-white));
-  background: url(../images/background.svg) fixed center/cover no-repeat;
+  background-image: var(--fon-gradient), url(../images/background-green.svg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  @include mobile {
+    background-image: var(--fon-gradient), url(../images/background-green.png);
+  }
 }
 
 a,
@@ -32,7 +39,7 @@ h1,
   font-family: var(--font-family-second);
   font-weight: 500;
   @include fluid-text(36, 24);
-  line-height: 153%;
+  padding-top: 23px;
   text-transform: uppercase;
   text-align: center;
   color: var(--color-black);

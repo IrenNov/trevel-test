@@ -11,14 +11,19 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
-    gap: 32px;
-    justify-content: center;
+    column-gap: clamp(28px, 2.5vw, 32px);
+    row-gap: clamp(32px, 2.89vw, 37px);
     padding: 0;
+    align-items: stretch;
+    justify-content: center;
+    box-sizing: border-box;
   }
 
   &__item {
     width: clamp(288px, 43.49vw, 372px);
-    box-sizing: border-box; 
+    box-sizing: border-box;
+  @include mobile{
+    width: 336px;    
   }
-
+}
 }
