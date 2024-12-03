@@ -4,13 +4,13 @@ body {
   font-weight: 700;
   line-height: 1.28;
   color: rgb(var(--color-white));
-  background-image: var(--fon-gradient), url(../images/background-green.svg);
+  background-image: var(--fon-gradient), url(../images/background-grey.svg);
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   @include mobile {
-    background-image: var(--fon-gradient), url(../images/background-green.png);
+    background-image: url(../images/background.jpg);
   }
 }
 
