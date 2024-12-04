@@ -239,6 +239,11 @@ body {
   background-position: bottom;
   z-index: -1;
 }
+@media (max-width: 320px) {
+  .background {
+    background-image: url(../images/background.jpg);
+  }
+}
 
 a,
 button,

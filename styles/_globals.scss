@@ -15,6 +15,9 @@ body {
   background-size: cover;
   background-position: bottom;
   z-index: -1;
+  @include mobile-s {
+       background-image: url(../images/background.jpg);
+     }
 }
 
 a,
